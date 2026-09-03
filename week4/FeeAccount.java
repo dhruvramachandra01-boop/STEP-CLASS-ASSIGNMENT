@@ -1,6 +1,4 @@
-package week4;
-
-public class FeeAccount {
+class FeeAccount {
     public void pay() {
         System.out.println("Paid in one go (day-scholar account)");
     }
@@ -49,6 +47,4 @@ class PaymentProcessor {
 
         processor.printBatchSummary();
     }
-} {
-    
 }
