@@ -1,0 +1,35 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+class ParkingTicket {
+   String vehicleNo;
+   double ratePerMinute;
+
+   public ParkingTicket(String var1, double var2) {
+      this.vehicleNo = var1;
+      this.ratePerMinute = var2;
+   }
+
+   public final double calculateFine(int var1) {
+      return (double)var1 * this.ratePerMinute;
+   }
+
+   public final void printReceipt(int var1) {
+      double var2 = this.calculateFine(var1);
+      System.out.println(this.vehicleNo + " - Fine: Rs " + var2);
+   }
+
+   public static void main(String[] var0) {
+      String[] var1 = new String[]{"TN09AB1234", "TN22CD5678", "TN09EF9012", "TN10GH3456"};
+      double[] var2 = new double[]{(double)2.0F, (double)2.0F, (double)3.0F, (double)2.0F};
+      int[] var3 = new int[]{15, 0, -5, 8};
+
+      for(int var4 = 0; var4 < var1.length; ++var4) {
+         ParkingTicket var5 = new ParkingTicket(var1[var4], var2[var4]);
+         if (var3[var4] > 0) {
+            var5.printReceipt(var3[var4]);
+         } else {
+            System.out.println(var1[var4] + " - No fine, within allotted time");
+         }
+      }
+
+   }
+}
